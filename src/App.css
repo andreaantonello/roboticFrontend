@@ -1,0 +1,166 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e2e;
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sidebar {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  font-weight: 50;
+  line-height: 1.5;
+  width: 100%;
+  height: 10%;
+  background-color: #3d7eef;
+  padding: 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.box {
+  width: calc(30% + 20px); /* Adjust box width based on the number of columns */
+  background-color: #27293c;
+  padding: 30px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.box-header {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 200;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.box-title {
+  margin-left: 10px;
+  align-items: center;
+  margin-right: 10px;
+}
+
+
+.status-indicator {
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+
+
+/* Define keyframes for fading animation */
+@keyframes fadeAnimation {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Apply fading animation when status is 'ok' and background color is green */
+.status-indicator.ok {
+  background-color: green;
+  animation: fadeAnimation 1s ease infinite; /* Apply the fade animation */
+}
+
+
+.no-background {
+  background: none;
+  border: none;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  color: #ffffff;
+}
+
+input[type="text"]:read-only {
+  background-color: transparent;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.textbox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.label-right {
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex: 1; /* Allow label to take up remaining space */
+}
+
+.value-left {
+  flex: 2; /* Allow input to take up remaining space */
+  background: none;
+  border: none;
+  /*color: #ffffff;*/
+  outline-color: #3d7eef;
+}
+
+.websocket-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.websocket-box input[type="text"] {
+  width: 200px; /* Adjust the width as needed */
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  color: #1e1e2e;
+  margin-right: 10px;
+}
+
+.websocket-box button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #1e88e5;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.websocket-box button:hover {
+  background-color: #0d47a1;
+}
+
