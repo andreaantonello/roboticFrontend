@@ -6,6 +6,7 @@ import WebSocketHandler from './components/WebSocketHandler';
 import URDFViewer from './components/URDFViewer';
 import TelemetryDisplay from './components/TelemetryDisplay'; // Import TelemetryDisplay component
 
+
 function App() {
     const [isConnected, setIsConnected] = useState(false);
     const [webSocketUrl, setWebSocketUrl] = useState('');
@@ -70,14 +71,20 @@ function App() {
             </div>
             <div className="main-content">
                 <div className="row">
-                    <Box title="Box 1" jointNumber="1" isConnected={isConnected} position={positions[0]} velocity={velocities[0]} current={currents[0]}/>
-                    <Box title="Box 2" jointNumber="2" isConnected={isConnected} position={positions[1]} velocity={velocities[0]} current={currents[0]}/>
-                    <Box title="Box 3" jointNumber="3" isConnected={isConnected} position={positions[2]} velocity={velocities[0]} current={currents[0]}/>
+                    <Box title="Box 1" jointNumber="1" isConnected={isConnected} position={positions[0]}
+                         velocity={velocities[0]} current={currents[0]}/>
+                    <Box title="Box 2" jointNumber="2" isConnected={isConnected} position={positions[1]}
+                         velocity={velocities[0]} current={currents[0]}/>
+                    <Box title="Box 3" jointNumber="3" isConnected={isConnected} position={positions[2]}
+                         velocity={velocities[0]} current={currents[0]}/>
                 </div>
                 <div className="row">
-                    <Box title="Box 4" jointNumber="4" isConnected={isConnected} position={positions[3]} velocity={velocities[0]} current={currents[0]}/>
-                    <Box title="Box 5" jointNumber="5" isConnected={isConnected} position={positions[4]} velocity={velocities[0]} current={currents[0]}/>
-                    <Box title="Box 6" jointNumber="6" isConnected={isConnected} position={positions[5]} velocity={velocities[0]} current={currents[0]}/>
+                    <Box title="Box 4" jointNumber="4" isConnected={isConnected} position={positions[3]}
+                         velocity={velocities[0]} current={currents[0]}/>
+                    <Box title="Box 5" jointNumber="5" isConnected={isConnected} position={positions[4]}
+                         velocity={velocities[0]} current={currents[0]}/>
+                    <Box title="Box 6" jointNumber="6" isConnected={isConnected} position={positions[5]}
+                         velocity={velocities[0]} current={currents[0]}/>
                 </div>
                 <TelemetryDisplay
                     webSocketUrl={webSocketUrl}
@@ -87,6 +94,9 @@ function App() {
                 />
             </div>
             <ThreeScene/>
+            <h1>Real-Time Live Chart</h1>
+            {/*<LiveChart/>*/}
+            {/*<PositionChart positions={positions}/>*/}
         </div>
     );
 }

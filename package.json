@@ -6,15 +6,20 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "chart.js": "^4.4.2",
+    "chartjs-plugin-streaming": "^2.0.0",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
     "react-scripts": "^3.0.1",
     "roslib": "^1.4.1",
+    "styled-components": "^6.1.8",
     "three": "^0.163.0",
     "urdf-loader": "^0.12.1",
     "web-vitals": "^2.1.4",
-    "ws": "^8.16.0"
+    "ws": "^8.16.0",
+    "yarn": "^1.22.22"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,6 +46,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "@babel/preset-react": "^7.24.1",
     "mock-socket": "^9.3.1"
   }
 }
